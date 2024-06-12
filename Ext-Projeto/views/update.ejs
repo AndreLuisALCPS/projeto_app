@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Update User</title>
+</head>
+<body>
+  <form action="/users/update" method="post">
+    <input type="email" name="email" placeholder="Email" value="<%= user.email %>" required>
+    <input type="text" name="nickname" placeholder="Nickname" value="<%= user.nickname %>" required>
+    <input type="password" name="password" placeholder="Password" required>
+    <input type="text" name="country" placeholder="Country" value="<%= user.country %>" required>
+    <button type="submit">Update</button>
+  </form>
+</body>
+</html>

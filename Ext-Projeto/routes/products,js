@@ -1,0 +1,26 @@
+const express = require('express');
+const router = express.Router();
+const db = require('../models/product');
+
+router.get('/', async (req, res) => {
+  const products = await db.getAllProducts();
+  res.render('produtos', { products });
+});
+
+router.get('/edit/:id', async (req, res) => {
+  const product = await db.getProductById(req.params.id);
+  res.render('editar_produto', { product });
+});
+
+router.post('/edit/:id', async (req, res) => {
+  const { name, description, price, image } = req.body;
+  await db.updateProduct(req.params.id, name, description, price, image);
+  res.redirect('/products');
+});
+
+router.get('/delete/:id', async (req, res) => {
+  await db.deleteProduct(req.params.id);
+  res.redirect('/products');
+});
+
+module.exports = router;

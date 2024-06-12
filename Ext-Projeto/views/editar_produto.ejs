@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Editar Produto</title>
+</head>
+<body>
+  <form action="/products/edit/<%= product.id %>" method="post">
+    <input type="text" name="name" placeholder="Nome" value="<%= product.name %>" required>
+    <input type="text" name="description" placeholder="Descrição" value="<%= product.description %>" required>
+    <input type="number" name="price" placeholder="Preço" value="<%= product.price %>" required>
+    <input type="text" name="image" placeholder="Imagem" value="<%= product.image %>" required>
+    <button type="submit">Salvar</button>
+  </form>
+</body>
+</html>

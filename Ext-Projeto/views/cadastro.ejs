@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <title>Cadastro</title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <h1>Cadastrar-se</h1>
+  <form action="/users/register" method="post">
+    <input type="email" name="email" placeholder="Endereço de email" required>
+    <input type="text" name="nickname" placeholder="Apelido" required>
+    <input type="password" name="password" placeholder="Senha" required>
+    <select name="country" required>
+      <option value="">País</option>
+      <option value="Brasil">Brasil</option>
+      <option value="Portugal">Portugal</option>
+      <!-- Adicionar mais opções de países aqui -->
+    </select>
+    <button type="submit">Cadastrar</button>
+  </form>
+</body>
+</html>
