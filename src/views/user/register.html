@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro</title>
+  <link href="/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #0e0e1d;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .form-container {
+      background-color: #1e1e2d;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h2 class="text-center">Cadastrar-se</h2>
+    <form>
+      <div class="form-group">
+        <label for="email">Endereço de email</label>
+        <input type="email" class="form-control" id="email" placeholder="Digite seu email">
+      </div>
+      <div class="form-group">
+        <label for="apelido">Apelido</label>
+        <input type="text" class="form-control" id="apelido" placeholder="Digite seu apelido">
+      </div>
+      <div class="form-group">
+        <label for="senha">Senha</label>
+        <input type="password" class="form-control" id="senha" placeholder="Digite sua senha">
+      </div>
+      <div class="form-group">
+        <label for="pais">País</label>
+        <select class="form-control" id="pais">
+          <option>Brasil</option>
+          <option>Portugal</option>
+          <option>Estados Unidos</option>
+          <option>Outro</option>
+        </select>
+      </div>
+      <button type="submit" class="btn btn-primary btn-block">Cadastrar</button>
+    </form>
+  </div>
+</body>
+</html>
